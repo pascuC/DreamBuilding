@@ -23,6 +23,8 @@
    <link rel="stylesheet" href="css/versions.css">
    <!-- Responsive CSS -->
    <link rel="stylesheet" href="css/responsive.css">
+   <!-- Star CSS -->
+   <link rel="stylesheet" type="text/css" href="css/star.css" >
    <!-- building CSS -->
    <link rel="stylesheet" href="css/building.css">
    </head>
@@ -190,7 +192,7 @@
                      <div style="margin-top: 30px;" class="service-widget">
                         <div class="post-media wow fadeIn">
                            <a href="uploads/const1.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img style="height: 288px; width: 384px;" src="uploads/const1.JPG" alt="" class="img-responsive img-rounded">
+                           <img style="margin-left: auto; margin-right: auto; height: 288px; width: 384px;" src="uploads/const1.JPG" alt="" class="img-responsive img-rounded">
                         </div>
                         
                      </div>
@@ -206,7 +208,7 @@
                      <div style="margin-top: 30px;" class="service-widget">
                         <div class="post-media wow fadeIn">
                            <a href="uploads/plumbing.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img style="height: 288px; width: 384px;" src="uploads/plumbing.JPG" alt="" class="img-responsive img-rounded">
+                           <img style="margin-left: auto; margin-right: auto; height: 288px; width: 384px;" src="uploads/plumbing.JPG" alt="" class="img-responsive img-rounded">
                         </div>
                         
                      </div>
@@ -220,9 +222,9 @@
                   <div class="serv-blog-cont">
                      <h3>Roofing</h3>
                      <div style="margin-top: 30px;" class="service-widget">
-                        <div class="post-media wow fadeIn">
+                        <div style="vertical-align: middle;" class="post-media wow fadeIn">
                            <a href="uploads/roof.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                           <img style="height: 288px; width: 384px;" src="uploads/roof.JPG" alt="" class="img-responsive img-rounded">
+                           <img style="margin-left: auto; margin-right: auto; height: 288px; width: 384px;" src="uploads/roof.JPG" alt="" class="img-responsive img-rounded">
                         </div>
          
                      </div>
@@ -398,7 +400,7 @@
             <div class="section-title row text-center">
                <div class="col-md-8 col-md-offset-2">
                   <h3>Testimonials</h3>
-                  <p class="lead">Find what other think about us</p>
+                  <p class="lead">Find what others think about us</p>
                </div>
                <!-- end col -->
             </div>
@@ -406,7 +408,6 @@
             <div class="row">
                <div class="col-md-12 col-sm-12">
                   <div class="testi-carousel owl-carousel owl-theme">
-                     
                      <% for(let review of reviews) { %>
                         <div class="testimonial clearfix">
                            <div class="desc">
@@ -418,13 +419,11 @@
                               <h4><%= review.lastName %> <%= review.firstName %></h4>
                               <!-- <input type="range" min="1" max="5" name="" id=""> -->
                            </div>
-                           <div style="margin-top: 15px;">
-                              
-                              <input type="range" min="1" max="5" class="form-range" id="rating" name="review">
+                           <div style="margin-top: 25px;">
+                              <p style="margin-right: auto; margin-left: auto;" class="starability-result" data-rating="<%= review.rating %>"></p>
                            </div>
                         <!-- end testi-meta -->
                         </div>
-                        
                      <% } %>
                      <!-- end testimonial -->
                   </div>
@@ -498,7 +497,19 @@
                               <textarea class="form-control" name="review[body]"  rows="6" placeholder="Review" required></textarea>
                            </div>
                            <div style="margin-bottom: 5%;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <input type="range" min="1" max="5" name="review[rating]">
+                              <fieldset style="margin-left: auto; margin-right: auto;" class="starability-basic">
+                                 <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="3" checked aria-label="No rating." />
+                                 <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+                                 <label for="first-rate1" title="Terrible">1 star</label>
+                                 <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                                 <label for="first-rate2" title="Not good">2 stars</label>
+                                 <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                                 <label for="first-rate3" title="Average">3 stars</label>
+                                 <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                                 <label for="first-rate4" title="Very good">4 stars</label>
+                                 <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                                 <label for="first-rate5" title="Amazing">5 stars</label>
+                               </fieldset>
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                               <button class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>

@@ -680,7 +680,9 @@ li.social-links a {
     position: relative;
 }
 .testimonial p:after {
-    display: none;
+    /* display: none; */
+    margin-left: auto;
+    margin-right: auto;
 }
 /*------------------------------------------------------------------
     PRICING TABLES
