@@ -260,73 +260,29 @@
             </div>
          </div>
          <div style="margin-top: 2%;">
-            
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter kitchen">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter carpentery">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter roof">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter bathroom">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter roof">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter roof">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter bathroom">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter roof">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter roof">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter carpentery">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter bathroom">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter kitchen">
-               <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div  class="col-lg-2 col-md-3 col-sm-4 col-xs-6 gal-item filter carpentery">
-               <div style="height: 280.83px; width: 310.83px;" class="box">
-                  <a href="#" data-toggle="modal" data-target="#1">
-                  <img style="height: 280.83px; width: 310.83px;" src="images/pro1.png" alt="#" />
-                  </a>
-                  <div  class="modal fade" id="1" tabindex="-1" role="dialog">
-                     <div class="modal-dialog" role="document">
-                        <div  class="modal-content">
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                           <div class="modal-body">
-                              <img src="images/pro1.png" class="img-responsive" alt="#" />
-                           </div>
-                        </div>
+            <% for(var i=1; i < 9; i++) { %>
+               <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter kitchen">
+                  <div class="service-widget">
+                     <div class="post-media wow fadeIn">
+                        <a href="images/kitchen/<%= i %>.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img style="height: 200px; width: 280px;" src="images/kitchen/<%= i %>.JPG" alt="" class="img-responsive img-rounded">
                      </div>
                   </div>
                </div>
-            </div>
+            <% } %>
+            
+            <% for(var i=1; i < 28; i++) { %>
+               <div class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter roof">
+                  <div class="service-widget">
+                     <div class="post-media wow fadeIn">
+                        <a href="images/roof/<%= i %>.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img style="height: 200px; width: 280px;" src="images/roof/<%= i %>.JPG" alt="" class="img-responsive img-rounded">
+                     </div>
+                  </div>
+               </div>
+            <% } %>
 
+            
          </div>
       </div>
       <!-- end section -->
@@ -550,6 +506,6 @@
       <script src="js/gallery.js"></script>
       <script src="js/portfolio.js"></script>
       <script src="js/hoverdir.js"></script>
+      
    </body>
 </html>
-

@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
     $(".btn-filt").click(function(){
@@ -6,21 +7,19 @@ $(document).ready(function(){
         if(value == "all")
         {
             //$('.filter').removeClass('hidden');
-            $('.filter').show('100');
+            $('.filter').show('300');
         }
         else
         {
 //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
 //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('100');
-            $('.filter').filter('.'+value).show('100');
+            $(".filter").not('.' + value).hide('300');
+            $('.filter').filter('.' + value).show('300');
             
         }
     });
     
-    if ($(".btn-filt").removeClass("active")) {
-$(this).removeClass("active");
-}
-$(this).addClass("active");
+    if ($(".btn-filt").removeClass("active")) { $(this).removeClass("active"); }
+    $(this).addClass("active");
 
 });
