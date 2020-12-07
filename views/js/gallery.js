@@ -6,14 +6,14 @@ $(document).ready(function(){
         if(value == "all")
         {
             //$('.filter').removeClass('hidden');
-            $('.filter').show('10000');
+            $('.filter').show('100');
         }
         else
         {
 //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
 //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('10000');
-            $('.filter').filter('.'+value).show('10000');
+            $(".filter").not('.'+value).hide('100');
+            $('.filter').filter('.'+value).show('100');
             
         }
     });
