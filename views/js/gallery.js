@@ -1,20 +1,22 @@
-
 $(document).ready(function(){
-
+   
     $(".btn-filt").click(function(){
-        var value = $(this).attr('data-filter');
-        
+        const value = $(this).attr('data-filter');
         if(value == "all")
         {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('300');
+            // $(".filt1").removeClass('container');
+            // $(".filt2").removeClass('row');
+            // $(".filt3").removeClass('col-md-12 col-sm-12');
+            // $(".filt4").removeClass('testi-carousel owl-carousel owl-theme');
+            $('.filter').show('100');
         }
         else
         {
 //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
 //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.' + value).hide('300');
-            $('.filter').filter('.' + value).show('300');
+            
+            $(".filter").not('.' + value).hide('100');
+            $('.filter').filter('.' + value).show('100');
             
         }
     });
