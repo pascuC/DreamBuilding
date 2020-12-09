@@ -12,7 +12,7 @@
    <meta name="description" content="">
    <meta name="author" content="">
    <!-- Site Icons -->
-   <link rel="shortcut icon" href="images/fevicon.ico.png" type="image/x-icon" />
+   <link rel="shortcut icon" href="images/logo-icon.png" type="image/x-icon" />
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <!-- Site CSS -->
@@ -260,17 +260,17 @@
             </div>
          </div>
          <div style="margin-top: 3%;">
-            <div class="filt1 container">
-               <div class="filt2 row">
-                  <div class="filt3 col-md-12 col-sm-12">
-                     <div class="filt4 testi-carousel owl-carousel owl-theme">
-                       
-                        <% for(var i=1; i < 9; i++) { %>
-                           <div style="margin-left:30px; height: 200px; width: 280px;" class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter kitchen">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                     <div class="testi-carousel owl-carousel owl-theme">
+                        
+                        <% for(var i=1; i < 27; i++) { %>
+                           <div style="margin-left:30px; height: 200px; width: 280px;" class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter roof">
                               <div class="service-widget">
                                  <div class="">
-                                    <a href="images/kitchen/<%= i %>.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img style="height: 200px; width: 280px; " src="images/kitchen/<%= i %>.JPG" alt="" class="img-responsive img-rounded">
+                                    <a href="images/Carpentry/<%= i %>.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                    <img style="height: 200px; width: 280px;" src="images/Carpentry/<%= i %>.JPG" alt="" class="img-responsive img-rounded">
                                  </div>
                               </div>
                            </div>
@@ -285,6 +285,27 @@
                               </div>
                            </div>
                         <% } %>
+                        <% for(var i=1; i < 26; i++) { %>
+                           <div style="margin-left:30px; height: 200px; width: 280px;" class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter kitchen">
+                              <div class="service-widget">
+                                 <div class="">
+                                    <a href="images/bathroom/<%= i %>.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                    <img style="height: 200px; width: 280px; " src="images/bathroom/<%= i %>.JPG" alt="" class="img-responsive img-rounded">
+                                 </div>
+                              </div>
+                           </div>
+                        <% } %>
+                        <% for(var i=1; i < 9; i++) { %>
+                           <div style="margin-left:30px; height: 200px; width: 280px;" class="gallery_product col-lg-2 col-md-3 col-sm-4 col-xs-6 filter kitchen">
+                              <div class="service-widget">
+                                 <div class="">
+                                    <a href="images/kitchen/<%= i %>.JPG" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                    <img style="height: 200px; width: 280px; " src="images/kitchen/<%= i %>.JPG" alt="" class="img-responsive img-rounded">
+                                 </div>
+                              </div>
+                           </div>
+                        <% } %>
+                        
                         
                      </div>
                   </div>
@@ -438,7 +459,7 @@
                   <div class="widget widget_text">
                      <h2 class="widget-title"><span>ABOUT US</span></h2>
                      <div class="textwidget">
-                        <a class="navbar-brand" href="index-building.html"><img src="images/logo-icon.png" alt="image"><span>Dream Building LTD</span></a>
+                        <a class="navbar-brand" href="#"><img src="images/logo-icon.png" alt="image"><span>Dream Building LTD</span></a>
                         <p>Dream Building Ltd specialise in construction, building and all about home improvement!</p>
                      </div>
                   </div>
