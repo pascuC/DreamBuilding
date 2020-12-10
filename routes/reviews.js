@@ -30,10 +30,11 @@ router.post('/review', validateReview, async(req, res, next)=>{
     const review = new Review(req.body.review);
     try{
         await review.save();
-        res.redirect(`/`);
+        //res.redirect(`/`);
     } catch (e) {
         res.status(404).send(e);
     }
 });
+
 
 module.exports = router;

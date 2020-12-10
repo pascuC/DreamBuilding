@@ -1,12 +1,13 @@
 if(process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
-
+//mongodb+srv://Admin:Mm123dream321@dreambuilding.nuksg.mongodb.net/DreamBuildingLTD?retryWrites=true&w=majority
 const express = require("express");
 const bodyParser = require('body-parser')
 const mongoose  = require("mongoose");
 const path = require('path');
 const ejsMate = require('ejs-mate');
+const mongoSanitize = require('express-mongo-sanitize');
 
 const app = express();
 
@@ -15,7 +16,8 @@ const reviews = require('./routes/reviews')
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 });
 
 const db = mongoose.connection;
@@ -24,12 +26,13 @@ db.once("open", () =>{
     console.log("Database connected");
 })
 
-
 app.engine('ejs', ejsMate);
 app.use(express.static(__dirname + '/views'));
+app.use(mongoSanitize());
 app.use(bodyParser.urlencoded({extended: true})) 
 app.use(bodyParser.json()) 
 app.use('/', reviews);
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
