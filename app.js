@@ -1,7 +1,7 @@
 if(process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
-//mongodb+srv://Admin:Mm123dream321@dreambuilding.nuksg.mongodb.net/DreamBuildingLTD?retryWrites=true&w=majority
+
 const express = require("express");
 const bodyParser = require('body-parser')
 const mongoose  = require("mongoose");
