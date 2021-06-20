@@ -642,6 +642,16 @@ li.social-links a {
     background: #000;
     border: 1px solid #111111;
 }
+.desc .lead {
+    height: 9em;
+    overflow: hidden;
+}
+.desc.showContent p{
+    height: auto;
+}
+.desc .showContent a.readmore-btn {
+    background-color: red;
+}
 .testi-meta {
     display: block;
     margin-top: 20px;
